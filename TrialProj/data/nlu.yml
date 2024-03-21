@@ -1,0 +1,109 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - not my name
+    - need to change
+    - this is not correct
+    - incorrect
+- intent: inform
+  examples: |
+    - My name is [Shathir](name)
+    - [Kabilesh](name) is my name
+    - im [Mohamed](name)
+    - people call me [Ali](name)
+    - myself [Shathir](name)
+    - [Ali](name)
+    - My number is [1234567890](number)
+    - my mobile number is [2345678901](number)
+    - [1234567890] is my mobile number
+    - call me on [1234567890](number)
+    - my contact number is [1234567890](number
+    - I live in [Chennai](city)
+    - My place is [Mumbai](city)
+    - Im from [Chennai](city)
+    - [Mumbai](city) is my place
+    - My city is [Goa](city)
+    - My name is [Sharmin](name)
+    - [8148010579](number)
+    - [0523206383](number)
+    - I live in [Chennai](city)
+    - This is my [85N](ass_id)
+    - I believe this is my [85Q](ass_id)
+    - I was provided [65A](ass_id)
+    - [476A](ass_id)
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+- intent: new_arrival
+  examples: |
+    - Tell me about the onboarding process
+    - What is the onboarding process like?
+    - Can you provide information about onboarding?
+    - I have questions about the onboarding process
+    - How does the onboarding process work?
+
+- intent: wifi_access
+  examples: |
+    - Can I get the wifi password?
+    - How can I connect to the wifi network?
+    - What is the wifi network name?
+    - Is there a guest wifi network available?
+    - I need access to the wifi.
+    - Can you help me with the wifi setup?
+
+- intent: need_help
+  examples: |
+    - yeah i need help
+    - help needed
+    - sure need help
+    - y
+    - yes
+    - i do need help
+    - yes i need help
+    - indeed
+    - of course
+    - HELP

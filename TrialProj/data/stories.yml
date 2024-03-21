@@ -1,0 +1,105 @@
+version: "3.1"
+
+stories:
+
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: greet
+#  - action: simple_form
+#  - active_loop: simple_form
+#  - slot_was_set:
+#    - requested_slot: name
+#  - intent: inform
+#    entities:
+#    - name: Sharmin
+#  - slot_was_set:
+#    - name: Sharmin
+#  - action: simple_form
+#  - slot_was_set:
+#    - requested_slot: number
+#  - intent: inform
+#    entities:
+#    - number: '8148010579'
+#  - slot_was_set:
+#    - number: '8148010579'
+#  - action: simple_form
+#  - slot_was_set:
+#    - requested_slot: city
+#  - intent: inform
+#  - intent: inform
+#    entities:
+#    - city: Coimbatore
+#  - action: action_default_fallback
+#  - intent: deny
+#  - intent: inform
+#  - intent: inform
+#    entities:
+#    - city: Coimbatore
+#  - action: action_default_fallback
+#
+#- story: interactive_story_2
+#  steps:
+#  - intent: greet
+#  - action: simple_form
+#  - active_loop: simple_form
+#  - slot_was_set:
+#    - requested_slot: name
+#  - intent: inform
+#    entities:
+#    - name: Sharmin
+#  - slot_was_set:
+#    - name: Sharmin
+#  - action: simple_form
+#  - slot_was_set:
+#    - requested_slot: number
+#  - intent: inform
+#    entities:
+#    - number: '0523206383'
+#  - slot_was_set:
+#    - number: '0523206383'
+#  - action: simple_form
+#  - slot_was_set:
+#    - requested_slot: city
+#  - intent: inform
+#    entities:
+#    - city: Chennai
+#  - slot_was_set:
+#    - city: Chennai
+#  - action: simple_form
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_say_data
+
+- story: Creating checkpoint
+  steps:
+  - intent: need_help
+  - action: utter_what_help
+  - checkpoint: chk_help
+
+- story: Creating checkpoint
+  steps:
+  - intent: deny
+  - action: utter_recall
+  - checkpoint: chk_help
+
+
+- story: Regarding the New Arrival
+  steps:
+  - checkpoint: chk_help
+  - intent: new_arrival
+  - action: utter_intro
+  - action: utter_help
+  - action: action_custom_restart
+
+
+
+- story: Regarding the Wifi
+  steps:
+  - checkpoint: chk_help
+  - intent: wifi_access
+  - action: utter_wifi
+  - action: utter_help
+  - action: action_custom_restart
+
